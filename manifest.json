@@ -1,0 +1,21 @@
+{
+
+  "manifest_version": 2,
+  "name": "Yet Another Twitter Link Expander",
+  "version": "0.1",
+
+  "description": "Expands shortened links on twitter to the original URL (minus trackers).",
+  "homepage_url": "https://github.com/gcp/twitter-link-expander",
+
+  "icons": {
+    "48": "twitter_icon.svg",
+    "96": "twitter_icon.svg"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitter.com/*"],
+      "js": ["twitter-link-expand.js"]
+    }
+  ]
+}
